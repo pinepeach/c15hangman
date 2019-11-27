@@ -18,7 +18,6 @@ let word_bank = {
     'REDSKULL': 'I guide others to a treasure I cannot possess',
     'VISION': 'Mind Stone',
     'ORB': 'Power Stone'
-
 }
 
 
