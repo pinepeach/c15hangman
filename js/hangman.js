@@ -76,8 +76,7 @@ function lostlife() {
 
 
 function displayWord() {
-    let length = parseInt(word_bank.length)
-    let i = Math.floor(Math.random() * length)
+    let i = Math.floor(Math.random() * 19)
     let randomWord = Object.keys(word_bank)
     let randomHint = Object.values(word_bank)
     return [randomWord[i], randomHint[i]]
