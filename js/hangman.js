@@ -84,11 +84,17 @@ function displayWord() {
 }
 function LosingMessage() {
     let name = prompt('What\'s your name?')
-    word.innerHTML = 'GAME OVER ' + name
+    word.innerHTML = 'GAME OVER ' + name.toUpperCase()
+    if((name == null) || (name == '')){
+        word.innerHTML = 'GAME OVER LOSER!'
+    }
 }
 function SolvedMessage() {
     let name = prompt('What\'s your name?')
-    word.innerHTML = 'CONGRATULATIONS ' + name +'!'
+    word.innerHTML = 'CONGRATULATIONS ' + name.toUpperCase() +'!'
+    if((name == null) || (name == '')){
+        word.innerHTML = 'CONGRATULATIONS WINNER!'
+    }
 }
 function Solved() {
     if (CorrectClicks == randomWord.length) {
@@ -119,14 +125,17 @@ document.getElementById('restart').onclick = refresh
 function changeImage() {
     document.getElementById('hangmanImg').src = hangman_pics[lives]
 }
-createButtons()
-displayWordFunction = displayWord()
-randomWord = displayWordFunction[0]
-console.log(randomWord)
-randomHint = displayWordFunction[1]
-hint.innerHTML = 'Hint: ' + randomHint
-hideWordsFunction = hideWords(randomWord)
-wordList = hideWordsFunction[0]
-blankList = hideWordsFunction[1]
-livestext.innerHTML = 'You have ' + lives + ' lives left'
-changeImage()
+function play(){
+    createButtons()
+    displayWordFunction = displayWord()
+    randomWord = displayWordFunction[0]
+    console.log(randomWord)
+    randomHint = displayWordFunction[1]
+    hint.innerHTML = 'Hint: ' + randomHint
+    hideWordsFunction = hideWords(randomWord)
+    wordList = hideWordsFunction[0]
+    blankList = hideWordsFunction[1]
+    livestext.innerHTML = 'You have ' + lives + ' lives left'
+    changeImage()
+}
+play()
