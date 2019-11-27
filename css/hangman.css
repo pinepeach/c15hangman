@@ -60,5 +60,5 @@ body{
 }
 
 #buttonClicked{
-    display: hidden;
+    visibility: hidden;
 }
