@@ -1,14 +1,24 @@
 let word_bank = {
     'COMMITTEE': 'A group that is in charge of a specific task.',
-    'POTATO': 'Vegetable', 'contemplating': 'thinking for a long time',
-    'INDECISIVE': 'Not being able to settle an issue',
-    'SLEEPY': 'BCIT students',
-    'ASLEEP': 'Jason quach (yellow hoodie) in class',
+    'LOKI': 'Lowkey',
+    'BLACKWIDOW': 'See you in a minute',
+    'THOR': 'Noobmaster69',
     'DATABASE': 'We don\'t know what\'s happening',
-    'GIRAFFE': 'Long-necked animal',
-    'QUAGGA': 'Extinct animal',
-    'FELICIA': 'Our leader',
-    'JESUS': ' That guy with the long hair'
+    'DRAX': 'When is Gamora?',
+    'SPIDERMAN': 'Mr. Stark, I don\'t feel so good',
+    'IRONMAN': 'Even in Death I am The Hero',
+    'HULK': 'SMASH',
+    'CAPTAINAMERICA': 'He was worthy',
+    'AVENGERS': 'Assemble',
+    'GROOT': 'I am...',
+    'TESSERACT': 'Space Stone',
+    'AETHER': 'Reality Stone',
+    'VORMIR': 'Soul Stone',
+    'BOBA': 'SAT Drink',
+    'REDSKULL': 'I guide others to a treasure I cannot possess',
+    'VISION': 'Mind Stone',
+    'ORB': 'Power Stone'
+
 }
 
 
@@ -18,7 +28,7 @@ let lives = 7
 let CorrectClicks = 0
 function createButtons() {
     for (i = 65; i < 91; i++) {
-        if (i == 79){
+        if (i == 79) {
             document.write('<br><br>')
         }
         let btn = document.createElement('button')
@@ -33,12 +43,12 @@ function createButtons() {
                     blankList[i] = btn.innerHTML
                     wordListJoin = blankList.join('  ')
                     document.getElementById('word').innerHTML = wordListJoin
-                    CorrectClicks+=1
+                    CorrectClicks += 1
 
                 }
             }
-            if (! wordList.includes(btn.innerHTML)){
-               lostlife()
+            if (!wordList.includes(btn.innerHTML)) {
+                lostlife()
             }
             Solved()
         }
@@ -46,13 +56,13 @@ function createButtons() {
 }
 
 
-function lostlife(){
+function lostlife() {
     lives -= 1;
     livestext.innerHTML = 'You have ' + lives + ' lives left';
     changeImage()
-    if (lives == 0){
+    if (lives == 0) {
         for (i = 65; i < 91; i++) {
-            try{
+            try {
                 document.getElementById('button_id').id = 'buttonClicked'
             }
             catch{
@@ -66,22 +76,23 @@ function lostlife(){
 
 
 function displayWord() {
-    let i = Math.floor(Math.random() * 11)
+    let length = parseInt(word_bank.length)
+    let i = Math.floor(Math.random() * length)
     let randomWord = Object.keys(word_bank)
     let randomHint = Object.values(word_bank)
     return [randomWord[i], randomHint[i]]
 }
 
-function UsersName(){
+function UsersName() {
     let name = prompt('What\'s your name?')
     word.innerHTML = 'GAME OVER ' + name
-    
+
 }
 
-function Solved(){
-    if (CorrectClicks == randomWord.length){
+function Solved() {
+    if (CorrectClicks == randomWord.length) {
         for (i = 65; i < 91; i++) {
-            try{
+            try {
                 document.getElementById('button_id').id = 'buttonClicked'
             }
             catch{
@@ -102,7 +113,7 @@ function hideWords(randomWord) {
 }
 
 
-function refresh(){
+function refresh() {
     window.location.reload(true)
 }
 document.getElementById('restart').onclick = refresh
@@ -123,7 +134,7 @@ randomWord = displayWordFunction[0]
 console.log(randomWord)
 randomHint = displayWordFunction[1]
 
-hint.innerHTML = 'Hint: '+randomHint
+hint.innerHTML = 'Hint: ' + randomHint
 
 hideWordsFunction = hideWords(randomWord)
 wordList = hideWordsFunction[0]
