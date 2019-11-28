@@ -72,7 +72,7 @@ function lostlife() {
                 console.log(i + ' is already gone')
             }
         }
-        setTimeout(LosingMessage, 1000)
+        setTimeout(LosingMessage, 500)
     }
 }
 function losepoint() {
@@ -111,7 +111,7 @@ function Solved() {
                 console.log(i + ' is already gone')
             }
         }
-        setTimeout(SolvedMessage, 1000)
+        setTimeout(SolvedMessage, 500)
     }
 }
 function hideWords(randomWord) {
