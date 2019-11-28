@@ -9,6 +9,17 @@
     border: none;
 }
 
+#restart {
+    width: 100px;
+    height: 50px;
+    margin-left: 7px;
+    font-size: 20px;
+    background-color: rgba(101, 113, 226, 0.815);
+    border-color: grey;
+    border-radius: 4px;
+    border: none;
+}
+
 #button_id:hover{
     background-color: rgba(205, 134, 63, 0.562);
     cursor: pointer;
@@ -66,11 +77,22 @@ body{
 
 @media only screen and (max-width:500px) and (min-width:350px) {
     #button_id {
-        width: 20%;
-        height: 20%;
+        width: 20px;
+        height: 20px;
         margin-left: 7px;
         font-size: 20px;
         background-color: peru;
+        border-color: grey;
+        border-radius: 4px;
+        border: none;
+    }
+
+    #restart {
+        width: 50px;
+        height: 20px;
+        margin-left: 7px;
+        font-size: 20px;
+        background-color: rgba(101, 113, 226, 0.815);
         border-color: grey;
         border-radius: 4px;
         border: none;
