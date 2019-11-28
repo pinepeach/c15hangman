@@ -25,9 +25,6 @@ let lives = 7
 let CorrectClicks = 0
 function createButtons() {
     for (i = 65; i < 91; i++) {
-        if (i == 79) {
-            document.write('<br><br>')
-        }
         let btn = document.createElement('button')
         btn.innerHTML = String.fromCharCode(i);
         btn.id = 'button_id'
