@@ -134,7 +134,6 @@ function play(){
     createButtons()
     displayWordFunction = displayWord()
     randomWord = displayWordFunction[0]
-    console.log(randomWord)
     randomHint = displayWordFunction[1]
     hint.innerHTML = 'Hint: ' + randomHint
     hideWordsFunction = hideWords(randomWord)
