@@ -52,6 +52,13 @@ function createButtons() {
         }
     }
 }
+
+
+function addpoint() {
+    score += 1;
+    document.getElementById("score").innerHTML = 'Score: ' + score
+}
+
 function lostlife() {
     lives -= 1;
     livestext.innerHTML = 'You have ' + lives + ' lives left';
@@ -65,36 +72,34 @@ function lostlife() {
                 console.log(i + ' is already gone')
             }
         }
-        LosingMessage()
+        setTimeout(LosingMessage, 1000)
     }
 }
 function losepoint() {
     score -= 1;
     document.getElementById("score").innerHTML = 'Score: ' + score
 }
-function addpoint() {
-    score += 1;
-    document.getElementById("score").innerHTML = 'Score: ' + score
-}
+
 function displayWord() {
     let i = Math.floor(Math.random() * 19)
     let randomWord = Object.keys(word_bank)
     let randomHint = Object.values(word_bank)
     return [randomWord[i], randomHint[i]]
 }
+
 function LosingMessage() {
     let name = prompt('What\'s your name?')
-    word.innerHTML = 'GAME OVER ' + name.toUpperCase()
     if((name == null) || (name == '')){
         word.innerHTML = 'GAME OVER LOSER!'
     }
+    word.innerHTML = 'GAME OVER ' + name.toUpperCase()
 }
 function SolvedMessage() {
     let name = prompt('What\'s your name?')
-    word.innerHTML = 'CONGRATULATIONS ' + name.toUpperCase() +'!'
     if((name == null) || (name == '')){
         word.innerHTML = 'CONGRATULATIONS WINNER!'
     }
+    word.innerHTML = 'CONGRATULATIONS ' + name.toUpperCase() +'!'
 }
 function Solved() {
     if (CorrectClicks == randomWord.length) {
@@ -106,7 +111,7 @@ function Solved() {
                 console.log(i + ' is already gone')
             }
         }
-        SolvedMessage()
+        setTimeout(SolvedMessage, 1000)
     }
 }
 function hideWords(randomWord) {
