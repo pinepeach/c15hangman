@@ -78,10 +78,10 @@ body{
 
 @media only screen and (max-width:500px) and (min-width:350px) {
     #button_id {
-        width: 20vw;
-        height: 20vh;
+        width: 250vw;
+        height: 250vh;
         margin-left: 7px;
-        font-size: 20px;
+        font-size: 150px;
         background-color: peru;
         border-color: grey;
         border-radius: 4px;
@@ -89,10 +89,10 @@ body{
     }
 
     #restart {
-        width: 50vw;
-        height: 20vw;
+        width: 250vw;
+        height: 250vw;
         margin-left: 7px;
-        font-size: 20px;
+        font-size: 150px;
         background-color: rgba(101, 113, 226, 0.815);
         border-color: grey;
         border-radius: 4px;
@@ -108,10 +108,10 @@ body{
 
     #buttonClicked{
         background-color: rgba(156, 106, 56, 0.692);
-        width: 20vw;
-        height: 20vh;
+        width: 250vw;
+        height: 250vh;
         margin-left: 7px;
-        font-size: 20px;
+        font-size: 150px;
         border-color: grey;
         cursor: not-allowed;
         border-radius: 4px;
