@@ -6,7 +6,7 @@ let word_bank = {
     'DATABASE': 'We don\'t know what\'s happening',
     'DRAX': 'When is Gamora?',
     'SPIDERMAN': 'Mr. Stark, I don\'t feel so good',
-    'IRONMAN': 'Even in Death I am The Hero',
+    'EDITH': 'Even in Death I am The Hero',
     'HULK': 'SMASH',
     'CAPTAINAMERICA': 'He was worthy',
     'AVENGERS': 'Assemble',
@@ -17,7 +17,9 @@ let word_bank = {
     'BOBA': 'SAT Drink',
     'REDSKULL': 'I guide others to a treasure I cannot possess',
     'VISION': 'Mind Stone',
-    'ORB': 'Power Stone'
+    'ORB': 'Power Stone',
+    'TATTOO': 'A form of body modification where a design is made by inserting ink',
+    'ELECTRICITY': 'The set of physical phenomena associated with the presence and motion of electric charge.'
 }
 let hangman_pics = ['img/7.gif', 'img/6.gif', 'img/5.gif', 'img/4.gif', 'img/3.gif', 'img/2.gif', 'img/1.gif', 'img/0.gif']
 let score = 0
@@ -90,6 +92,8 @@ function LosingMessage() {
         word.innerHTML = 'GAME OVER LOSER!'
     }
     word.innerHTML = 'GAME OVER ' + name.toUpperCase()
+    document.getElementById("audio2").play()
+
 }
 function SolvedMessage() {
     let name = prompt('What\'s your name?')
@@ -97,6 +101,7 @@ function SolvedMessage() {
         word.innerHTML = 'CONGRATULATIONS WINNER!'
     }
     word.innerHTML = 'CONGRATULATIONS ' + name.toUpperCase() +'!'
+    document.getElementById("audio").play()
 }
 function Solved() {
     if (CorrectClicks == randomWord.length) {
